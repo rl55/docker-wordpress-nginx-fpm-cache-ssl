@@ -24,7 +24,7 @@
 # Default: `example.com`
 # ----------------------------------------------------------
 
-HOST_NAME=${HOST_NAME:-example.com}
+SERVER_NAME=${SERVER_NAME:-example.com}
 
 # ----------------------------------------------------------
 # DB Related
@@ -103,16 +103,16 @@ chown www-data:www-data /usr/share/nginx/www/wp-config.php
 #
 
 # Replace the placeholder in Nginx config files for server name.
-sed -i -e "s/server_name_placeholder/$HOST_NAME/g" /etc/nginx/nginx-site-http.conf
-sed -i -e "s/server_name_placeholder/$HOST_NAME/g" /etc/nginx/nginx-site-https.conf
-sed -i -e "s/server_name_placeholder/$HOST_NAME/g" /etc/nginx/sites-available/default
+sed -i -e "s/server_name_placeholder/$SERVER_NAME/g" /etc/nginx/nginx-site-http.conf
+sed -i -e "s/server_name_placeholder/$SERVER_NAME/g" /etc/nginx/nginx-site-https.conf
+sed -i -e "s/server_name_placeholder/$SERVER_NAME/g" /etc/nginx/sites-available/default
 
 # add server name to /etc/hosts to avoid timeout when code make http call to public url
 EXT_IP=`ip route get 8.8.8.8 | awk '{print $NF; exit}'`
-echo "$EXT_IP   $HOST_NAME" >> /etc/hosts
+echo "$EXT_IP   $SERVER_NAME" >> /etc/hosts
 
 # we want to be able to curl the web site from the localhost using https (for purging the cache, and for the cron)
-echo "127.0.0.1 $HOST_NAME" >> /etc/hosts
+echo "127.0.0.1 $SERVER_NAME" >> /etc/hosts
 
 
 
