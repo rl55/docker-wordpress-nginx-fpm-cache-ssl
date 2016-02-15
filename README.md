@@ -1,5 +1,7 @@
 # Dockerized Nginx + Cache + Wordpress with Optional SSL
 
+[![](https://badge.imagelayers.io/cowfox/docker-wordpress-nginx-fpm-cache-ssl:latest.svg)](https://imagelayers.io/?images=cowfox/docker-wordpress-nginx-fpm-cache-ssl:latest 'Get your own badge on imagelayers.io')
+
 Docker file with related **scripts** and **config** files to help build a Docker container that runs the following pieces **out-of-the-box**:
 
 - PHP-FPM.
