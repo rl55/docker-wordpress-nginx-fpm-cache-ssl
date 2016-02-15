@@ -47,7 +47,7 @@ cp $LE_ACME_FILE /etc/nginx/acme.challenge.le.conf
 mkdir -p $LE_WEBROOT
 
 # Reload
-nngix -s reload
+nginx -t && service nginx reload
 
 # ----------------------------------------------------------
 # Install letsencrypt and generate SSL.
@@ -78,4 +78,4 @@ sed -i -e "
 /etc/nginx/ssl.$SERVER_NAME.conf
 
 # Reload
-nngix -s reload
+nginx -t && service nginx reload

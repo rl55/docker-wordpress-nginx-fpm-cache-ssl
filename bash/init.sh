@@ -5,9 +5,10 @@
 #
 # The task includes:
 #
-# - Set up **default** env. variables, such as **host name**, **DB access info**, etc.
+# - Set up **default** env. variables, such as **DB host name**, **DB access info**, etc.
 # - Modify the `wp-config.php` based on the **env. variables**.
-# - Update **Host Name** to all other config files.
+# - Update **Server Name** to all other config files.
+# - Start supervisord service.
 #
 # ===============================================================================
 

@@ -42,4 +42,4 @@ sed -i -e "
 
 
 # Reload
-nngix -s reload
+nginx -t && service nginx reload

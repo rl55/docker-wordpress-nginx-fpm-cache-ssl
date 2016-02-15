@@ -215,7 +215,10 @@ CMD ["/bin/bash", "/init.sh"]
 COPY bash/ssl-letsencrypt.sh /addon/letsencrypt/ssl-letsencrypt.sh
 
 # Normal SSL related
+COPY bash/ssl.sh /addon/ssl.sh
 
+# Install WP plugins
+COPY bash/wp-install-plugins.sh /addon/wp-install-plugins.sh
 
 
 # ===============================================================================
