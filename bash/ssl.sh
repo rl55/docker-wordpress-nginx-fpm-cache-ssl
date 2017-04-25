@@ -14,8 +14,8 @@
 # ===============================================================================
 
 SSL_TRUSTED_CERT_FILE=${SSL_TRUSTED_CERT_FILE:-/ssl_fullchain.pem}
-SSL_CERT_FILE=${SSL_TRUSTED_CERT_FILE:-/ssl_fullchain.pem}
-SSL_CERT_KEY_FILE=${SSL_TRUSTED_CERT_FILE:-/ssl_privkey.pem}
+SSL_CERT_FILE=${SSL_CERT_FILE:-/ssl_fullchain.pem}
+SSL_CERT_KEY_FILE=${SSL_CERT_KEY_FILE:-/ssl_privkey.pem}
 
 # ----------------------------------------------------------
 # Copy SSL to **Nginx** folder
